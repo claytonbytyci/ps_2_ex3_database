@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ps_2_ex3_database"
+version = "0.1.0"
+description = "Database utilities for Problem Set 2"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "claytonbytyci", email = "cab252@cam.ac.uk" },
+]
+requires-python = ">=3.10"
+dependencies = [
+    "SQLAlchemy>=1.4",
+    "python-dotenv>=0.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=24.0",
+    "flake8>=6.0",
+]
+
+[project.urls]
+Homepage = "https://example.com/ps_2_ex3_database"
+Repository = "https://github.com/claytonbytyci/ps_2_ex3_database"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
